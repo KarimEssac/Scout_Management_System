@@ -1,0 +1,106 @@
+Database Structure (Core Tables & Fields)
+1. scouter
+id (PK)
+full_name
+email
+password
+phone
+address
+birthdate
+year
+school 
+has_mandeel(boolean)
+entrance_year 
+taliaa
+team
+ab_eetraf
+total_score
+qr_token
+missed_events_count
+
+2. attendance
+id (PK)
+user_id (FK → Users)
+event_id (FK → Events)
+attended_at (timestamp)
+attendance_score
+
+3. event
+id (PK)
+title
+description
+event_date
+attendance_score
+created_by (FK → Admins)
+open (Boolean)
+
+4. bonuses_or_penalties
+id (PK)
+user_id (FK → Users)
+score_change (+ or -)
+reason
+date_given
+given_by (FK → Admins)
+
+5. admins
+id (PK)
+full_name
+email
+password
+image
+role (enum(viewer, dashboard))
+
+6. qr_codes
+id (PK)
+event_id (FK -> event)
+token
+generated_by (FK -> admins)
+generated_at (timestap)
+
+7. apologies
+id (PK)
+scouter_id (FK → scouter)
+event_id (FK → event)
+reason 
+status (enum('pending', 'approved', 'declined'))
+submitted_at (timestamp)
+reviewed_by (FK → admins)
+reviewer_reason
+
+8. scouter_flags
+id (PK)
+scouter_id (FK -> scouter)
+flag_type 
+description
+flagged_at Timestamp
+
+9. device_associations
+id (PK)
+user_id (FK -> scouter)
+fingerprint
+storage_id
+ip_address
+first_seen
+last_seen
+
+10. suspicious_attempts
+id (PK)
+user_id (FK -> scouter)
+attempted_user_id (FK -> scouter)
+fingerprint
+storage_id
+ip_address
+attempt_time
+
+11. communication_tickets
+id (PK)
+scouter_id (FK → scouter)
+type ENUM('تظلم', 'اقتراح', 'شكوة', 'رسالة عامة', 'ابلاغ عن خطأ تقني')
+message
+submitted_at
+status ENUM('open', 'responded')
+response
+responded_at 
+responded_by (FK -> admins) 
+penalty_id (FK -> bonuses_or_penalties)
+flag_id (FK -> scouter_flags)
