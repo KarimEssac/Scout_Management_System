@@ -1,6 +1,6 @@
 How to Run the Project
 Clone the repository:-
-Open your terminal or Git Bash and run: git clone https://github.com/your-username/your-repo-name.git
+Open your terminal or Git Bash and run: git clone [https://github.com/your-username/your-repo-name.git](https://github.com/KarimEssac/Scout_Management_System)
 Move the project to XAMPP
 Copy the cloned folder to your htdocs directory (usually found in C:\xampp\htdocs).
 Start XAMPP
