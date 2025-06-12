@@ -1,16 +1,27 @@
 How to Run the Project
 ----------------------
 Clone the repository:-
+
 Open your terminal or Git Bash and run: git clone https://github.com/KarimEssac/Scout_Management_System
+
 Move the project to XAMPP
+
 Copy the cloned folder to your htdocs directory (usually found in C:\xampp\htdocs).
+
 Start XAMPP
+
 Open XAMPP Control Panel.
+
 Start Apache and MySQL.
+
 Import the Database
+
 Open your browser and go to phpMyAdmin.
+
 Create a new database.
+
 Use the provided structure in the file: DB link.txt (it contains the link or structure of the database).
+
 Run the Project
 
 Visit http://localhost/your-project-folder in your browser.
