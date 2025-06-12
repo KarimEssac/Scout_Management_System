@@ -1,4 +1,5 @@
 How to Run the Project
+----------------------
 Clone the repository:-
 Open your terminal or Git Bash and run: git clone https://github.com/KarimEssac/Scout_Management_System
 Move the project to XAMPP
